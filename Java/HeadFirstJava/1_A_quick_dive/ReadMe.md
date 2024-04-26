@@ -12,8 +12,8 @@
 
 **Using While Loop:**
 
-2. Write a program that prints numbers from 1 to 10 using a while loop.
-3. Write a program that calculates the factorial of a number using a while loop.
+2. Write a program that prints numbers from 1 to 10 using a while loop. [code](./exercises/2_PrintNumbers/PrintNumbers.java)
+3. Write a program that calculates the factorial of a number using a while loop. [code]()
 4. Write a program that checks if a given number is prime using a while loop.
 
 **Using If-Else and Else-If:**
