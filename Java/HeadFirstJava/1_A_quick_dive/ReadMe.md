@@ -5,9 +5,10 @@
 4. Creating array of strings
 
 > Based on the Quick Dive chapters concepts, here are 30 programming exercises;
+
 **Hello World:**
 
-1. Write a program that prints "Hello, World!" to the console.
+1. Write a program that prints "Hello, World!" to the console. [code](./exercises/1_hello_world/HelloWorld.java)
 
 **Using While Loop:**
 
