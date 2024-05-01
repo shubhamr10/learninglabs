@@ -60,6 +60,92 @@ Based on the Quick Dive chapters, here are some exercies
 5. Interfaces
 6. Multilevel interfaces
 7. Invoking a parent class methods. 
+8. Using Math.random()
+9. Using for loop 
+10. Pre and post increment/decrement operator
+11. Casting primitives
 
+1. Using the ArrayList and all it's methods = add(), remove(), contains(), isEmpty(), indexOf(), size(), get()
+2. Difference between Array and ArrayList
+3. Changing the Startup game using ArrayList
+4. Building the game in 7 x 7 grid.
+5. Boolean expressions - AND, OR, NOT EQUALS
+6. Short circuit operators
+7. Non-short circuit operators
+8. Understanding the GameHelper class.
 
+1. Using inheritance - using subclasses
+2. Writing the Animals program to understand inheritance.
+3. Over-riding the methods of the superclass
+4. Demonstrating a multiple level inheritance using Animal example
+5. IS-A and Has-A rule.
+6. public and private members in inheritance
+7. Using polymorphism, the reference type of the actual object can be it's superclass
+8. Polymorphic arguments and retuen types.
+9. Overriding and Overloading the mehtods.
 
+1. Abstract classes
+2. Abstract vs Concrete classes
+3. Abstract methods
+4. The Objectt class and it's methods - equals(), hashCode(), getClass(), toString().
+5. Issue with using type Object for polymorphic reference.
+6. Snowboard example and how Snowboard can be treated as a Snowboard and a Object.
+7. Casting an object reference to its real type.
+8. Using interface
+9. Using a superclass version of the method.
+
+1. Stack and Heap
+2. How mehtods are stacked
+3. Constructors
+4. Parameterised constructors
+5. Overloading Constructors
+6. The role of superclass constructors in an object's life
+7. Invoking a superclass contructor
+8. Superclass construtors with arguments
+9. Calling an overloaded constructor with this() and understanding this();
+
+1. static methods
+2. Static methods can't use the non-static instance variables.
+3. sttatic variables
+4. static final 
+5. final variables, methods, class
+6. Using Math methods - Math.abs(), Math.round(), Math.min(), Math.max(), Math.sqrt()
+7. Wrapping a primitives to make Objects
+8. Unwrapping the object to their primitive type.
+9. An ArrayList of Primitive Ints
+10. Parsing String into primitives.
+11. Coverting prmitive to strings.
+12. Number formatting
+13. Using Format specifiers
+14. Static imports
+
+1. Songs & Jukebox example to the Arraylist
+2. The diamond operator - how it infers
+3. Exploring the Collections API  abstract sort() method of ArrayList of Strings.
+4. Exploring the List API and it's sort() using it to store the List of SOngs obj.
+5. Overriding the toString() method in the Song class
+6. Using List and applying Collections.sort() on it.
+7. Understading Generics
+8. Using the Generic classes
+9. Using Type parameter with ArrayList
+10. Using Generics methods - type parameter defined in a class and type parameter not defined in the class
+11. Understanding that in generics extends means "extends or implements
+12. Comparable interface and it's compareTo().
+13. Upgrading the class to implement Comparable song class
+14. Understanding Comparators, creating custom comparators
+15. Application of Comparators on List.sort() and Collections.sort()
+15. Sorting using only Comparators.
+16. Using Argument-defined anoymous inner class for Comparators.
+17. Sorting the songs based on different parameters
+18. Understading Lambda and it's interence
+19. Understanding the Single Abstract Method(Functional interfacces)
+20. Writing Lamda expression
+21. Removing duplicates using the HashSet
+22. Understanding What makes 2 objects equal?
+23. Overriding the hasCode() and equals() method in Hashset for sorting
+24. Using TreeSet
+25. Using HashMap
+26. Using Factory methods for Collections - creating List, Set, Map.
+27. Using polymorphic arguments and generics
+28. Using wildcards
+29. Using the method generic type parameter
