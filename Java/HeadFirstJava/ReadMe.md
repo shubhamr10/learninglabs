@@ -149,3 +149,15 @@ Based on the Quick Dive chapters, here are some exercies
 27. Using polymorphic arguments and generics
 28. Using wildcards
 29. Using the method generic type parameter
+
+1. forEach() method
+2. Stream APIs 
+3. Using the intermediate operations - stream(), filter(), map(), skip(), sorted()
+4. Using the terminal operation - anyMatch(), count(), collect(), findFirst()
+5. Creating a stream pipeline
+6. Using lambda expression on sorted()
+7. Using skip()
+8. Understanding Streams operations don't change the original collection
+9. Using Collectors.toUnmodifiableList()
+10. Lamda expressions - more one than one line, single line body and with zero, one or more parameters
+11. Understading and creating Functional Interfaces

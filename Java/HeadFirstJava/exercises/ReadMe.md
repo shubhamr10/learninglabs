@@ -1131,3 +1131,100 @@ Let's break down the exercises for each topic:
     a. Implement a generic method that accepts a collection of a specific type and performs a common operation (e.g., printing elements).
     b. Experiment with different types of collections and observe how the method behaves with each type.
 
+
+>> SET 12 
+
+Certainly! Let's break down the exercises for each topic:
+
+**Exercises for Understanding:**
+
+1. **forEach() Method:**
+   a. Write a program that iterates over a list of strings using the `forEach()` method and prints each element.
+   b. Discuss with peers the advantages of using `forEach()` over traditional loops.
+
+2. **Stream APIs:**
+   a. Explore the basic syntax of Stream API by creating streams from different data sources like collections and arrays.
+   b. Discuss with peers the concept of streams and their role in functional programming.
+
+3. **Using Intermediate Operations - stream(), filter(), map(), skip(), sorted():**
+   a. Implement a program that demonstrates each intermediate operation by applying them to a stream of integers.
+   b. Experiment with chaining multiple intermediate operations and observe the resulting stream.
+
+4. **Using Terminal Operation - anyMatch(), count(), collect(), findFirst():**
+   a. Write code snippets that use terminal operations like `anyMatch()`, `count()`, `collect()`, and `findFirst()` to process streams.
+   b. Discuss with peers the differences between short-circuiting and non-short-circuiting terminal operations.
+
+5. **Creating a Stream Pipeline:**
+   a. Create a stream pipeline that reads data from a file, filters out certain elements, and performs transformations using map operations.
+   b. Discuss with peers the concept of stream pipelines and how they facilitate data processing.
+
+6. **Using Lambda Expression on sorted():**
+   a. Sort a list of strings using the `sorted()` method and a lambda expression to define the sorting criteria.
+   b. Experiment with different lambda expressions to achieve different sorting orders.
+
+7. **Using skip():**
+   a. Implement a program that skips a certain number of elements from a stream and processes the remaining elements.
+   b. Discuss with peers the use cases for skipping elements in stream processing.
+
+8. **Understanding Streams Operations Don't Change the Original Collection:**
+   a. Write code examples that demonstrate how stream operations like `map()` and `filter()` do not modify the original collection.
+   b. Discuss with peers the immutability of streams and its implications.
+
+9. **Using Collectors.toUnmodifiableList():**
+   a. Collect elements from a stream into an unmodifiable list using the `Collectors.toUnmodifiableList()` method.
+   b. Discuss with peers the benefits of using unmodifiable lists and how they ensure data integrity.
+
+10. **Lambda Expressions - More Than One Line, Single Line Body and With Zero, One or More Parameters:**
+    a. Write lambda expressions with multiple lines of code, single line body, and different numbers of parameters.
+    b. Discuss with peers the syntax and flexibility of lambda expressions in Java.
+
+11. **Understanding and Creating Functional Interfaces:**
+    a. Explore built-in functional interfaces like `Predicate`, `Function`, and `Consumer` and understand their purpose.
+    b. Create custom functional interfaces with single abstract methods and use them in lambda expressions.
+
+**Exercises for Implementation:**
+
+1. **forEach() Method:**
+   a. Use the `forEach()` method to iterate over a list of objects and perform specific actions on each element.
+   b. Implement unit tests to verify the behavior of the `forEach()` method in different scenarios.
+
+2. **Stream APIs:**
+   a. Develop a program that reads data from a database and processes it using Stream API operations.
+   b. Discuss with peers the advantages of using Stream API for data manipulation.
+
+3. **Using Intermediate Operations - stream(), filter(), map(), skip(), sorted():**
+   a. Extend the program to include complex stream pipelines with multiple intermediate operations.
+   b. Implement error handling mechanisms for stream operations and discuss best practices.
+
+4. **Using Terminal Operation - anyMatch(), count(), collect(), findFirst():**
+   a. Enhance the program to include terminal operations for aggregating and processing stream data.
+   b. Implement performance tests to evaluate the efficiency of terminal operations for large datasets.
+
+5. **Creating a Stream Pipeline:**
+   a. Build a stream pipeline for processing real-world data like customer transactions or sensor readings.
+   b. Optimize the stream pipeline for performance and discuss strategies for improving efficiency.
+
+6. **Using Lambda Expression on sorted():**
+   a. Modify the program to use lambda expressions for defining sorting criteria in stream pipelines.
+   b. Experiment with different lambda expressions and compare their performance.
+
+7. **Using skip():**
+   a. Implement pagination functionality using the `skip()` method to skip a certain number of elements in a stream.
+   b. Discuss with peers the trade-offs of using skip operations for large datasets.
+
+8. **Understanding Streams Operations Don't Change the Original Collection:**
+   a. Write unit tests to verify that stream operations do not modify the original collection.
+   b. Discuss with peers the implications of immutability in stream processing.
+
+9. **Using Collectors.toUnmodifiableList():**
+   a. Refactor existing code to use `Collectors.toUnmodifiableList()` for collecting stream elements into unmodifiable lists.
+   b. Implement integration tests to ensure data integrity when using unmodifiable lists.
+
+10. **Lambda Expressions - More Than One Line, Single Line Body and With Zero, One or More Parameters:**
+    a. Refactor existing code to use lambda expressions with different syntax variations.
+    b. Discuss with peers the readability and maintainability benefits of using lambda expressions.
+
+11. **Understanding and Creating Functional Interfaces:**
+    a. Implement custom functional interfaces for specific use cases in the program.
+    b. Use these custom functional interfaces in lambda expressions and discuss their role in functional programming.
+
