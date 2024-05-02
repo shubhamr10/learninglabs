@@ -1228,3 +1228,105 @@ Certainly! Let's break down the exercises for each topic:
     a. Implement custom functional interfaces for specific use cases in the program.
     b. Use these custom functional interfaces in lambda expressions and discuss their role in functional programming.
 
+>> SET 12.1
+
+Certainly! Let's design exercises for each topic:
+
+**Exercises for Understanding:**
+
+12. **Writing the Song Class from Head First Java Streams Chapter:**
+    - Read the description of the Song class from the Head First Java Streams chapter.
+    - Implement the Song class with properties like title, artist, and duration.
+
+13. **Using filter() Using equals() and contains():**
+    - Create a list of strings containing song titles.
+    - Use the `filter()` method to filter out songs with a specific title using `equals()`.
+    - Use the `filter()` method to filter out songs containing a specific keyword using `contains()`.
+
+14. **Using map():**
+    - Create a list of songs.
+    - Use the `map()` method to transform each song's title to uppercase.
+
+15. **Removing Duplicate Using .distinct():**
+    - Create a list of strings containing song titles with duplicates.
+    - Use the `distinct()` method to remove duplicates from the list.
+
+16. **Using Method Reference and When You Cannot Use It:**
+    - Write code snippets where you can use method reference to refer to an existing method.
+    - Discuss scenarios where method reference cannot be used (e.g., non-static methods, methods with multiple parameters).
+
+17. **Collectors.toList() and Collectors.toUnmodifiableList():**
+    - Collect a stream of song titles into a list using `Collectors.toList()`.
+    - Collect a stream of song titles into an unmodifiable list using `Collectors.toUnmodifiableList()`.
+
+18. **Collectors.toSet() and Collectors.toUnmodifiableSet():**
+    - Collect a stream of song titles into a set using `Collectors.toSet()`.
+    - Collect a stream of song titles into an unmodifiable set using `Collectors.toUnmodifiableSet()`.
+
+19. **Collectors.toMap() and Collectors.toUnmodifiableMap():**
+    - Create a list of songs.
+    - Convert the list into a map with title as key and duration as value using `Collectors.toMap()`.
+    - Convert the list into an unmodifiable map using `Collectors.toUnmodifiableMap()`.
+
+20. **Collectors.joining() and Using Delimiter on It:**
+    - Create a list of song titles.
+    - Use `Collectors.joining()` to concatenate the song titles into a single string with a comma delimiter.
+
+21. **Using Streams Methods - anyMatch(), allMatch() and noneMatch():**
+    - Create a list of song titles.
+    - Use `anyMatch()`, `allMatch()`, and `noneMatch()` to check if any, all, or none of the titles contain a specific keyword.
+
+22. **Using Streams Methods - findAny(), findFirst(), max(), min() and reduce():**
+    - Create a list of songs.
+    - Use `findAny()` and `findFirst()` to find any or the first song in the list.
+    - Use `max()` and `min()` to find the longest and shortest duration songs.
+    - Use `reduce()` to concatenate all song titles into a single string.
+
+23. **Using Streams Methods - count():**
+    - Create a list of songs.
+    - Use `count()` to count the number of songs in the list.
+
+24. **Using Optional Wrapper and its Method isPresent() and get():**
+    - Use `Optional` to wrap a nullable value.
+    - Use `isPresent()` to check if the value is present.
+    - Use `get()` to retrieve the value if present.
+
+**Exercises for Implementation:**
+
+12. **Writing the Song Class from Head First Java Streams Chapter:**
+    - Implement the Song class with properties like title, artist, and duration.
+    - Implement methods like `getTitle()`, `getArtist()`, and `getDuration()`.
+
+13. **Using filter() Using equals() and contains():**
+    - Create a list of songs.
+    - Use the `filter()` method to filter out songs with a specific artist using `equals()`.
+    - Use the `filter()` method to filter out songs containing a specific keyword in the title using `contains()`.
+
+14. **Using map():**
+    - Create a list of songs.
+    - Use the `map()` method to transform each song's duration to milliseconds.
+
+15. **Removing Duplicate Using .distinct():**
+    - Create a list of songs.
+    - Use the `distinct()` method to remove duplicate songs based on title.
+
+16. **Using Method Reference and When You Cannot Use It:**
+    - Implement methods in a separate class.
+    - Use method reference to refer to these methods.
+    - Discuss scenarios where method reference cannot be used.
+
+17. **Collectors.toList() and Collectors.toUnmodifiableList():**
+    - Collect a stream of songs into a list using `Collectors.toList()`.
+    - Collect a stream of songs into an unmodifiable list using `Collectors.toUnmodifiableList()`.
+
+18. **Collectors.toSet() and Collectors.toUnmodifiableSet():**
+    - Collect a stream of songs into a set using `Collectors.toSet()`.
+    - Collect a stream of songs into an unmodifiable set using `Collectors.toUnmodifiableSet()`.
+
+19. **Collectors.toMap() and Collectors.toUnmodifiableMap():**
+    - Convert a list of songs into a map with title as key and duration as value using `Collectors.toMap()`.
+    - Convert a list of songs into an unmodifiable map using `Collectors.toUnmodifiableMap()`.
+
+20. **Collectors.joining() and Using Delimiter on It:**
+    - Create a list of song titles.
+    - Use
