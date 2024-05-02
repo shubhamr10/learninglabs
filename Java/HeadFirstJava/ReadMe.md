@@ -161,3 +161,16 @@ Based on the Quick Dive chapters, here are some exercies
 9. Using Collectors.toUnmodifiableList()
 10. Lamda expressions - more one than one line, single line body and with zero, one or more parameters
 11. Understading and creating Functional Interfaces
+12. Writing the Song class
+13. Using filter() using equals() and contains()
+14. Using map()
+15. Removing duplicate using .distinct()
+16. Using Method reference and when you cannot use it
+17. Collectors.toList() and Collectors.toUnmodifiableList();
+18. Collectors.toSet() and Collectors.toUnmodifiableSet();
+19. Collectors.toMap() and Collectors.toUnmodifiableMap();
+20. Collectors.joining() and using delimiter on it
+21. Using Streams methods - anyMatch(), allMatch() and noneMatch()
+22. Using Streams methods -  findAny(), findFirst(), max(), min() and reduce();
+23. Using Streams methods - count()
+24. Using Optional Wrapper and its method isPresent() and get()
