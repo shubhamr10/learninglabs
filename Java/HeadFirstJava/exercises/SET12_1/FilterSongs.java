@@ -21,5 +21,13 @@ public class FilterSongs{
 
         System.out.println("results" + results);
 
+        System.out.println("Filtering all the songs that contains the word rock in its genre");
+
+        Stream<Song> newSongStream = allSongs.stream();
+        Stream<Song> filterWithContains = newSongStream.filter(s -> s.getGenre().contains("Rock"));
+        List<Song> result2 = filterWithContains.collect(Collectors.toList());
+
+        System.out.println("results" + result2); 
+
     }
 }
