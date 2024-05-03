@@ -174,3 +174,16 @@ Based on the Quick Dive chapters, here are some exercies
 22. Using Streams methods -  findAny(), findFirst(), max(), min() and reduce();
 23. Using Streams methods - count()
 24. Using Optional Wrapper and its method isPresent() and get()
+
+
+>> SET 13
+
+1. Understanding exceptions in java.
+2. Using try/catch with exceptions declarations.
+3. Using custom exceptions.
+4. Using try/catch with finally
+5. DEclaring multiple exceptions
+6. exceptions are polymorphic
+7. ducking the exceptions
+8. try with only finally
+9. Writing a basic midievent in java to play a sound.
