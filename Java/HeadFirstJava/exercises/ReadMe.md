@@ -1329,4 +1329,103 @@ Certainly! Let's design exercises for each topic:
 
 20. **Collectors.joining() and Using Delimiter on It:**
     - Create a list of song titles.
-    - Use
+    - Use `Collectors.joining()` to concatenate the song titles into a single string with a custom delimiter.
+
+21. **Using Streams Methods - anyMatch(), allMatch() and noneMatch():**
+    - Create a list of songs.
+    - Use `anyMatch()`, `allMatch()`, and `noneMatch()` to check if any, all, or none of the songs have a specific keyword in the title.
+
+22. **Using Streams Methods - findAny(), findFirst(), max(), min() and reduce():**
+    - Create a list of songs.
+    - Use `findAny()` and `findFirst()` to find any or the first song in the list.
+    - Use `max()` and `min()` to find the longest and shortest duration songs.
+    - Use `reduce()` to concatenate all song titles into a single string.
+
+23. **Using Streams Methods - count():**
+    - Create a list of songs.
+    - Use `count()` to count the number of songs in the list.
+
+24. **Using Optional Wrapper and its Method isPresent() and get():**
+    - Wrap a nullable value with `Optional`.
+    - Use `isPresent()` to check if the value is present.
+    - Use `get()` to retrieve the value if present.
+
+
+>> SET 13
+
+Let's create exercises to cover each of these topics:
+
+**Exercises for Understanding:**
+
+1. **Understanding Exceptions in Java:**
+   - Research and list down different types of exceptions in Java along with their categories (checked, unchecked).
+   - Discuss with peers the significance of handling exceptions in Java programming.
+
+2. **Using try/catch with Exceptions Declarations:**
+   - Write a program that reads input from the user and converts it into an integer.
+   - Use try/catch blocks with specific exception declarations to handle potential errors like NumberFormatException.
+
+3. **Using Custom Exceptions:**
+   - Define a custom exception class, e.g., CustomException, with a specific message.
+   - Modify the previous program to throw CustomException in case of certain conditions not met.
+
+4. **Using try/catch with Finally:**
+   - Write a program that opens a file, performs some operations, and closes the file.
+   - Use try/catch/finally blocks to ensure the file is closed even if an exception occurs during operations.
+
+5. **Declaring Multiple Exceptions:**
+   - Write a method that performs multiple operations that can potentially throw different types of exceptions.
+   - Use try/catch blocks to handle each exception type separately.
+
+6. **Exceptions are Polymorphic:**
+   - Create a list of various exception types, including both built-in and custom exceptions.
+   - Demonstrate that exceptions are polymorphic by catching them with a common superclass or interface.
+
+7. **Ducking the Exceptions:**
+   - Write a program that calls a method known to throw an exception but doesn't handle the exception in the calling method.
+   - Discuss with peers the consequences of not handling exceptions at the appropriate level.
+
+8. **Try with Only Finally:**
+   - Write a program that only has a try block and a finally block but no catch block.
+   - Discuss with peers the scenarios where this might be useful and the implications.
+
+9. **Writing a Basic MidiEvent in Java to Play a Sound:**
+   - Research and understand the basic concepts of MidiEvent and sound playback in Java.
+   - Write a program that creates a MidiEvent to play a sound and handles any potential exceptions.
+
+**Exercises for Implementation:**
+
+1. **Understanding Exceptions in Java:**
+   - Write a program that demonstrates how unchecked exceptions propagate up the call stack if not caught.
+
+2. **Using try/catch with Exceptions Declarations:**
+   - Implement a program that reads a file name from the user and attempts to open the file.
+   - Handle FileNotFoundException using try/catch blocks with specific exception declarations.
+
+3. **Using Custom Exceptions:**
+   - Develop a program that performs authentication using a username and password.
+   - Throw a custom exception if the authentication fails due to incorrect credentials.
+
+4. **Using try/catch with Finally:**
+   - Enhance the file handling program to include reading data from the file and processing it.
+   - Ensure that the file is closed in the finally block regardless of whether an exception occurs.
+
+5. **Declaring Multiple Exceptions:**
+   - Extend the previous program to perform additional operations like parsing data from the file.
+   - Handle potential exceptions such as IOException and NumberFormatException using separate catch blocks.
+
+6. **Exceptions are Polymorphic:**
+   - Write a method that performs arithmetic operations and intentionally throws ArithmeticException, NullPointerException, and ArrayIndexOutOfBoundsException.
+   - Catch these exceptions using a common superclass or interface.
+
+7. **Ducking the Exceptions:**
+   - Develop a method that reads data from a file but does not handle the IOException it might throw.
+   - Call this method from another method and handle the exception there.
+
+8. **Try with Only Finally:**
+   - Write a program that attempts to perform a critical operation and releases system resources in the finally block.
+   - Ensure that the finally block is always executed, even if an unexpected exception occurs.
+
+9. **Writing a Basic MidiEvent in Java to Play a Sound:**
+   - Implement a program that creates a MidiEvent to play a specific sound file.
+   - Handle potential exceptions such as InvalidMidiDataException and MidiUnavailableException.
