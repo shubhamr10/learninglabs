@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first-advice-app</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <p>Welcome to my first React App!</p>
+
+    <button class="myButton">Get advice!</button>
+    <div class="timesAdvice"></div>
+    <p class="advice"></p>
+</body>
+<script>
+    // Manuualy implementing the DOM
+    const buttonEl = document.querySelector(".myButton");
+    const advice = document.querySelector(".advice");
+    const timesAdvice = document.querySelector(".timesAdvice");
+
+    let count = 0;
+    async function getAdvice(){
+        const res = await fetch("https://api.adviceslip.com/advice");
+        const data = await res.json();
+
+        advice.textContent = data.slip.advice;
+        count++;
+        timesAdvice.textContent = `Advice gotten ${count} times`;
+    }
+    getAdvice();
+
+    buttonEl.addEventListener("click", getAdvice);
+</script>
+</html>
