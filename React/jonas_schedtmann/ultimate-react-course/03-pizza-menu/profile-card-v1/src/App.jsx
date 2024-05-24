@@ -19,11 +19,14 @@ function Avatar() {
 
 function Intro() {
   return (
+    <div className="intro">
+    <h2>Armur</h2>
     <p>
       Hi, I am Armur. I am a web developer. I have experience in HTML, CSS, and
       JavaScript. I am a quick learner and a team player. I am looking for a job
       as a web developer.
     </p>
+    </div>
   );
 }
 
