@@ -1,0 +1,130 @@
+@font-face {
+  font-family: "outfit";
+  src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "young-serif";
+  src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+:root {
+  --nutmeg: hsl(14, 45%, 35%);
+  --dark-raspberry: hsl(332, 51%, 32%);
+  --white: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --wenge-brown: hsl(30, 10%, 34%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+}
+
+body {
+  background-color: var(--eggshell);
+  font-family: "young-serif";
+  font-weight: 400;
+}
+
+.main-body {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.banner-image {
+  border-radius: 10px;
+}
+
+.heading {
+  font-weight: lighter;
+}
+
+.heading-subtext {
+  font-family: "outfit";
+  font-size: 9px;
+  color: var(--wenge-brown);
+}
+
+section {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 11px;
+  padding: 5px;
+}
+
+section ul {
+  padding-left: 15px;
+}
+
+section ol {
+  padding-left: 15px;
+}
+
+section ol li::marker {
+  color: var(--nutmeg);
+  font-family: "outfit";
+  font-weight: bold;
+  padding: 5px;
+}
+
+section li {
+  font-weight: 400;
+  font-size: 9px;
+  color: var(--wenge-brown);
+  font-family: "outfit";
+  padding: 3px;
+}
+
+section li strong {
+  color: var(--dark-charcoal);
+}
+
+section span {
+  font-family: "young-serif";
+  font-size: 16px;
+  color: var(--nutmeg);
+}
+
+section p {
+  font-size: 9px;
+  font-family: "outfit";
+}
+
+hr {
+  opacity: 0.5;
+}
+
+.preparation-time {
+  background-color: var(--rose-white);
+  font-family: "outfit";
+}
+
+.preparation-time span {
+  font-size: 11px;
+  color: var(--nutmeg);
+  font-weight: 700;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+  font-size: 9px;
+  border-collapse: collapse;
+}
+tr {
+  border-bottom: 0.1px solid var(--light-grey);
+}
+
+table tr td:first-child {
+  font-family: "outfit";
+  padding: 8px;
+}
+table tr td:nth-child(2) {
+  color: var(--nutmeg);
+  font-weight: 700;
+  font-family: "outfit";
+  padding: 8px;
+}
