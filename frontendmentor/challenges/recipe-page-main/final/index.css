@@ -51,7 +51,7 @@
   }
 
   section ul {
-    padding-left: 15px;
+    padding-left: 25px;
   }
 
   section ol {
@@ -98,6 +98,7 @@
     font-family: "outfit";
     margin: 5px 35px;
     padding-top: 10px;
+    padding-left: 2px;
   }
 
   .preparation-time span {
