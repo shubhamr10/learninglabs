@@ -1,0 +1,224 @@
+@font-face {
+  font-family: "outfit";
+  src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "young-serif";
+  src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+:root {
+  --nutmeg: hsl(14, 45%, 35%);
+  --dark-raspberry: hsl(332, 51%, 32%);
+  --white: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --wenge-brown: hsl(30, 10%, 34%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+  --font-heading: 30px;
+  --font-normal: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    text-align: center;
+  }
+  .main-body {
+    background-color: var(--white);
+  }
+
+  section {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: "outfit";
+    padding: 20px 20px;
+  }
+
+  section:first-child {
+    padding: 0;
+  }
+
+  section h2 {
+    font-family: "young-serf";
+    font-size: 40px;
+  }
+
+  section p {
+    font-family: "outfit";
+    font-size: var(--font-normal);
+    color: var(--wenge-brown);
+  }
+
+  section span {
+    font-size: var(--font-heading);
+    color: var(--nutmeg);
+    font-family: "young-serif";
+  }
+
+  section ul {
+    padding-left: 25px;
+  }
+
+  section li {
+    font-family: "outfit";
+    font-size: var(--font-normal);
+  }
+
+  section ol li {
+    padding-left: 15px;
+  }
+
+  section ol li::marker {
+    margin: 20px;
+    color: var(--nutmeg);
+    font-weight: 700;
+  }
+
+  section:nth-child(3) {
+    background-color: var(--rose-white);
+    padding: 30px;
+    border-radius: 5px;
+    font-family: "outfit";
+  }
+
+  section:nth-child(3) span {
+    color: var(--nutmeg);
+    font-weight: 700;
+    font-size: var(--font-normal);
+  }
+
+  section table {
+    width: 100%;
+    font-size: var(--font-normal);
+    border-collapse: collapse;
+  }
+
+  section table tr {
+    border-bottom: 1px solid var(--light-grey);
+  }
+
+  section table td {
+    padding: 15px 40px;
+    color: var(--dark-charcoal);
+  }
+
+  section table td:nth-child(2) {
+    color: var(--nutmeg);
+    font-weight: 700;
+  }
+
+  hr {
+    opacity: 0.5;
+    color: var(--light-grey);
+  }
+
+  section table tr:last-child {
+    border-bottom: none;
+  }
+}
+
+/* bigger devices */
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: var(--rose-white);
+  }
+
+  .main-body {
+    background-color: var(--white);
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 15px;
+    padding: 40px 60px;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  section {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: "outfit";
+  }
+
+  section h2 {
+    font-family: "young-serf";
+    font-size: 40px;
+  }
+
+  section p {
+    font-family: "outfit";
+    font-size: var(--font-normal);
+    color: var(--wenge-brown);
+  }
+
+  section span {
+    font-size: var(--font-heading);
+    color: var(--nutmeg);
+    font-family: "young-serif";
+  }
+
+  section ul {
+    padding-left: 25px;
+  }
+
+  section li {
+    font-family: "outfit";
+    font-size: var(--font-normal);
+  }
+
+  section ol li {
+    padding-left: 15px;
+  }
+
+  section ol li::marker {
+    margin: 20px;
+    color: var(--nutmeg);
+    font-weight: 700;
+  }
+
+  section:nth-child(3) {
+    background-color: var(--rose-white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: "outfit";
+  }
+
+  section:nth-child(3) span {
+    color: var(--nutmeg);
+    font-weight: 700;
+    font-size: var(--font-normal);
+  }
+
+  section table {
+    width: 100%;
+    font-size: var(--font-normal);
+    border-collapse: collapse;
+  }
+
+  section table tr {
+    border-bottom: 1px solid var(--light-grey);
+  }
+
+  section table td {
+    padding: 12px 80px;
+    color: var(--dark-charcoal);
+  }
+
+  section table td:nth-child(2) {
+    color: var(--nutmeg);
+    font-weight: 700;
+  }
+
+  hr {
+    opacity: 0.5;
+    color: var(--light-grey);
+  }
+
+  section table tr:last-child {
+    border-bottom: none;
+  }
+}
