@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "figtree";
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "figtree-italics";
+  src: url("./assets/fonts/Figtree-Italic-VariableFont_wght.ttf");
+}
+
+:root {
+  --font-family: "figtree";
+  --font-family-italics: "figtree-italics";
+  --font-regular: 500;
+  --font-bold: 800;
+  --font-size-heading: 24px;
+  --font-size-regular: 16px;
+  --font-size-small: 14px;
+
+  --color-primary-yellow: hsl(47, 88%, 63%);
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-grey: hsl(0, 0%, 50%);
+  --color-neutral-black: hsl(0, 0%, 7%);
+
+  --card-width: 310px;
+  --card-height: 450px;
+}
+
+@media screen and (max-width: 375px) {
+}
+@media screen and (min-width: 375px) {
+  :root {
+    --card-width: 270px;
+    --card-height: 450px;
+  }
+}
+
+body {
+  background-color: var(--color-primary-yellow);
+}
+
+section {
+  height: var(--card-height);
+  width: var(--card-width);
+  background-color: var(--color-neutral-white);
+  padding: 24px;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 10%;
+  border: 1px solid var(--color-neutral-black);
+  box-shadow: 10px 10px;
+}
+
+section img {
+  border-radius: 15px;
+  margin-bottom: 12px;
+}
+
+section button {
+  display: block;
+  width: 70px;
+  height: 30px;
+  background-color: var(--color-primary-yellow);
+  font-family: var(--font-family);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-regular);
+  border: none;
+  border-radius: 5px;
+  font-weight: var(--font-bold);
+  color: var(--color-neutral-black);
+  margin-bottom: 12px;
+}
+
+section span {
+  font-size: var(--font-size-regular);
+  color: var(--color-neutral-black);
+  font-family: var(--font-family);
+  margin-bottom: 12px;
+}
+
+section h1 {
+  font-family: var(--font-family);
+  margin-bottom: 12px;
+}
+
+section h1:hover {
+  color: var(--color-primary-yellow);
+  cursor: pointer;
+}
+
+section p {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-family);
+  font-size: var(--font-size-regular);
+  color: var(--color-neutral-grey);
+  margin-bottom: 24px;
+}
+
+section p:last-child {
+  font-family: var(--font-family);
+  font-weight: var(--font-bold);
+  font-size: var(--font-size-small);
+  color: var(--color-neutral-black);
+  margin-bottom: 0px;
+}
+
+section p:last-child img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
