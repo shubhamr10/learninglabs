@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "inter";
+  src: url("./assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+:root {
+  --color-primary-green: hsl(75, 94%, 57%);
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-grey: hsl(0, 0%, 20%);
+  --color-neutral-dark-grey: hsl(0, 0%, 12%);
+  --color-neutral-off-black: hsl(0, 0%, 8%);
+  /* Typography */
+  --font-body-size: 14px;
+  --font-body-family: "inter";
+  --font-weight-regular: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+}
+
+body {
+  background-color: var(--color-neutral-off-black);
+}
+
+section {
+  background-color: var(--color-neutral-dark-grey);
+  margin: 300px auto;
+  height: max-content;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  font-size: var(--font-body-size);
+  font-family: var(--font-body-family);
+  color: var(--color-neutral-white);
+}
+
+section img {
+  /* width: 100%; */
+  width: 100px;
+  border-radius: 50%;
+}
+
+section h2 {
+  color: var(--color-neutral-white);
+  font-family: var(--font-body-family);
+  font-weight: var(--font-weight-medium);
+}
+
+section p:first-of-type {
+  color: var(--color-primary-green);
+  font-weight: var(--font-weight-bold);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+ul li {
+  margin-bottom: 7px;
+  margin-top: 7px;
+}
+a {
+  color: var(--color-neutral-white);
+  background-color: var(--color-neutral-grey);
+  text-decoration: none;
+  width: 100%;
+  font-family: var(--font-body-family);
+  font-weight: var(--font-weight-medium);
+  display: block;
+  padding: 15px 0;
+  border-radius: 5px;
+}
+
+a:hover {
+  background-color: var(--color-primary-green);
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+  color: var(--color-neutral-off-black);
+  font-family: var(--font-body-family);
+  font-weight: var(--font-weight-medium);
+}
+
+@media only screen and (min-width: 375px) {
+  section {
+    width: 400px;
+  }
+}
+
+/* Smaller device */
+@media only screen and (max-width: 375px) {
+  section {
+    width: 290px;
+  }
+}
