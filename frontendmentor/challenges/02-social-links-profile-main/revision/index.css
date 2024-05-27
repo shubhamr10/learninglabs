@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "inter";
+  src: url("./assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+:root {
+  --color-primary-green: hsl(75, 94%, 57%);
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-grey: hsl(0, 0%, 20%);
+  --color-neutral-dark-grey: hsl(0, 0%, 12%);
+  --color-neutral-off-black: hsl(0, 0%, 8%);
+  /* Typography */
+  --font-body-size: 14px;
+  --font-body-family: "inter";
+  --font-weight-regular: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+}
+
+body {
+  background-color: var(--color-neutral-off-black);
+}
+
+section {
+  background-color: var(--color-neutral-dark-grey);
+  text-align: center;
+  width: 300px;
+  border-radius: 15px;
+  font-family: var(--font-body-family);
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+section img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+section p {
+  font-size: var(--font-body-size);
+  color: var(--color-neutral-white);
+}
+
+section p:first-of-type {
+  font-size: 20px;
+}
+
+section p:nth-of-type(2) {
+  color: var(--color-primary-green);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 0;
+  margin: 5px 0;
+}
+
+ul li a {
+  display: block;
+  text-decoration: none;
+  background-color: var(--color-neutral-grey);
+  color: var(--color-neutral-white);
+  font-family: var(--font-body-family);
+  padding: 10px 0;
+  font-size: var(--font-body-size);
+  font-weight: var(--font-weight-medium);
+  border-radius: 5px;
+}
+
+ul li a:hover {
+  background-color: var(--color-primary-green);
+  color: var(--color-neutral-grey);
+}
+
+@media only screen and (max-width: 375px) {
+}
+
+@media only screen and (min-width: 375px) {
+}
