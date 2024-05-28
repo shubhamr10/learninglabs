@@ -37,7 +37,8 @@ body {
 
 #main-banner {
   /* height: var(--card-height); */
-  width: var(--card-width);
+  max-width: var(--card-width);
+  width: 80vw;
   background-color: var(--color-white);
   margin: 10% auto 0 auto;
   border-radius: 20px;
