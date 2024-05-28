@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "figtree";
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "figtree-italics";
+  src: url("./assets/fonts/Figtree-Italic-VariableFont_wght.ttf");
+}
+
+:root {
+  --font-family: "figtree";
+  --font-family-italics: "figtree-italics";
+
+  --font-regular: 500;
+  --font-bold: 800;
+
+  --font-size-heading: 24px;
+  --font-size-regular: 16px;
+  --font-size-small: 14px;
+
+  --color-primary-yellow: hsl(47, 88%, 63%);
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-grey: hsl(0, 0%, 50%);
+  --color-neutral-black: hsl(0, 0%, 7%);
+
+  --card-width: 310px;
+  --card-height: 450px;
+}
+
+body {
+  background-color: var(--color-primary-yellow);
+}
+
+section {
+  height: var(--card-height);
+  width: var(--card-width);
+  border-radius: 20px;
+  box-shadow: 10px 10px;
+  margin: 10% auto 0 auto;
+  padding: 15px;
+  background-color: var(--color-neutral-white);
+  font-family: "figtree";
+}
+
+section > * {
+  margin-bottom: 15px;
+}
+
+section img {
+  border-radius: 20px;
+}
+
+section button {
+  background-color: var(--color-primary-yellow);
+  color: var(--color-neutral-black);
+  font-size: var(--font-size-small);
+  height: 30px;
+  width: 100px;
+  border: none;
+  font-family: var(--font-family);
+  font-weight: var(--font-bold);
+}
+
+section span {
+  display: block;
+  font-family: var(--font-family);
+  font-size: var(--font-size-regular);
+  color: var(--color-neutral-grey);
+}
+
+section h1 {
+  font-family: var(--font-family);
+  font-size: var(--font-size-heading);
+  color: var(--color-neutral-black);
+}
+
+section p {
+  font-family: var(--font-family);
+  color: var(--color-neutral-black);
+}
+
+section div {
+  display: flex;
+  align-items: center;
+}
+
+section div img {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  margin-right: 24px;
+}
+
+section div {
+  font-family: var(--font-family);
+  font-weight: var(--font-bold);
+  font-size: var(--font-size-small);
+  color: var(--color-neutral-black);
+}
