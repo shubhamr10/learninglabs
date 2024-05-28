@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "work";
+  src: url("./assets/fonts/WorkSans-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "work-italics";
+  src: url("./assets/fonts/WorkSans-Italic-VariableFont_wght.ttf");
+}
+
+:root {
+  --font-regular: "work";
+  --font-italics: "work-italics";
+
+  --font-size-regular: 16px;
+  --font-size-heading: 56px;
+
+  --font-weight-bold: 700;
+  --font-weight-medium: 600;
+  --font-weight-regular: 400;
+
+  --color-white: hsl(0, 0%, 100%);
+  --color-light-pink: hsl(275, 100%, 97%);
+  --color-greyish-purple: hsl(292, 16%, 49%);
+  --color-dark-purple: hsl(292, 42%, 14%);
+
+  --card-height: 560px;
+  --card-width: 600px;
+}
+
+body {
+  background-color: var(--color-light-pink);
+  background-image: url("./assets/images/background-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#main-banner {
+  /* height: var(--card-height); */
+  width: var(--card-width);
+  background-color: var(--color-white);
+  margin: 10% auto 0 auto;
+  border-radius: 20px;
+  padding: 24px;
+}
+
+#main-banner h1 {
+  font-family: var(--font-regular);
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-bold);
+}
+
+#main-banner h1 span {
+  padding-right: 25px;
+}
+
+#main-banner section {
+  font-family: var(--font-regular);
+  font-size: var(--font-size-regular);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark-purple);
+}
+
+.panel {
+  font-family: var(--font-regular);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-greyish-purple);
+  display: none;
+}
+
+#main-banner section p:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+#main-banner section p:first-of-type:hover {
+  color: var(--color-greyish-purple);
+}
+
+#main-banner section p:first-of-type span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section:first-of-type p:nth-of-type(2) {
+  display: block;
+}
+
+@media only screen and (max-width: 367px) {
+  #main-banner {
+    width: 70vw;
+  }
+  body {
+    background-image: url("./assets/images/background-pattern-mobile.svg");
+  }
+}
