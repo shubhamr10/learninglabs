@@ -106,3 +106,133 @@ For example:
 - has
 - delete
 - clear
+- size
+
+**Iterating over set**
+- use `for of` loop to iterate over set.
+
+Example
+```javascript
+// there are 2 ways to create a new Set
+
+// Way - 1 using Set() constructor empty
+const emptySet = new Set();
+assert.equal(emptySet.size, 0);
+
+// Way -2 from using the iteratables
+const set = new Set(['red','blue', 'green']);
+
+// Methods
+// Adding elements to the set
+set.add("yellow");
+
+// Has - to check the element is member of the set
+const isYellowPresent = set.has("yellow"); // returns true or false.
+
+// size to check the size of the set
+const sizeOfSet = set.size;
+console.log(sizeOfSet);
+
+// delete - delete an element from the set
+const isDeleted = set.delete("red");
+console.log(set);
+
+for(const color of Set){
+    console.log(color);
+}
+
+
+// clear - remove all the elements from the set
+set.clear();
+```
+
+## Garbage Colelction mechanism
+
+Before we start with Weak set, lets understand the garbage collection first.
+![Garbage collection](./Object-reference.png)
+Let's understand the diagram.
+- The cloud refers to the heap memory where all the objects are created and stored.
+- Every object created has a reference attached to it.
+- When we assign a variable an object, the reference is stored inside a variable which is used to reach the object.
+- When we re-assign that variable to hold something else, let say `null`.
+- In this case, object becomes unusable and the **Garbage collection** destroys it.
+
+Example:
+```javascript
+let john = { name : "John" };
+// the object can be accessed, john variable store the reference to it.
+// let's overwrite the reference with something else
+
+john = null;
+// Now the object created becomes eligible for the garbage collection.
+```
+Now with sets
+```javascript
+let person = { name:"john", age: 18, year:1998 };
+const set = new Set();
+set.add(person);
+
+person = null; // the object reference is over-ridden but the object stays in the set
+for(let x of set){
+    console.log(x); // the object
+}
+```
+- To overcome this issue, weakset is used.
+
+### Weak Set
+- Weak set only add object and not primitives.
+- An object exisits in the set, only when it's reachable from somewhere else and not the weakset.
+- It only has `add()`, `has()` and `delete()` methods.
+- It does not have `size()`, `keys()` and not iterations.
+
+Example:
+```javascript
+let john = {name:"john"};
+let mary = {name:"mary"};
+let pete = {name:"pete"};
+
+const weakSet = new WeakSet();
+weakSet.add(john);
+weakSet.add(mary);
+weakSet.add(pete);
+
+john = null;
+// the weakSet will be cleared automatically
+```
+
+**Use Case** : Detecting circular reference
+
+
+```javascript
+// Execute a callback on everything stored inside an object
+function execRecursively(fn, subject, _refs = new WeakSet()) {
+  // Avoid infinite recursion
+  if (_refs.has(subject)) {
+    return;
+  }
+
+  fn(subject);
+  if (typeof subject === "object" && subject) {
+    _refs.add(subject);
+    for (const key in subject) {
+      execRecursively(fn, subject[key], _refs);
+    }
+    _refs.delete(subject);
+  }
+}
+
+const foo = {
+  foo: "Foo",
+  bar: {
+    bar: "Bar",
+  },
+};
+
+foo.bar.baz = foo; // Circular reference!
+execRecursively((obj) => console.log(obj), foo);
+
+```
+
+
+
+### Map

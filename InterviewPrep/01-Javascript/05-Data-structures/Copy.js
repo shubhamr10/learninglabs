@@ -88,3 +88,89 @@ console.log(myCarCopy);
 
 console.clear();
 // You can practise the rest of the methods on your own
+const set = new Set();
+console.log(set);
+set.add("red");
+set.add("yellow");
+set.add("green");
+set.add("yellow");
+
+console.log("isPinkPresent", set.has("pink"));
+console.log(set);
+
+console.log("delete yellow",set.delete("yellow"));
+console.log(set);
+
+console.log("size", set.size);
+
+for(const x of set){
+    console.log("x==>", x);
+}
+console.time("check");
+
+console.log("clearning the set");
+// set.clear();
+
+console.log(set);
+
+// converting set to array
+let arr = new Array(5);
+arr = Array.from(new Set(["1","2","3","4"]));
+console.log(arr);
+console.timeEnd("check");
+
+// console.clear();
+
+let john = {name:"john"};
+let mary = {name:"mary"};
+let pete = {name:"pete"};
+
+const weakSet = new WeakSet();
+weakSet.add(john);
+weakSet.add(mary);
+weakSet.add(pete);
+
+console.log(weakSet);
+
+john = null;
+setTimeout(() => {
+    console.log(weakSet);
+}, 2000);
+
+console.log(weakSet.has(john));
+
+for(let x of set){
+    console.log(x);
+}
+
+console.log(weakSet)
+
+
+function execRecursively(fn, subject, _refs = new WeakSet()) {
+    // Avoid infinite recursion
+    if (_refs.has(subject)) {
+      return;
+    }
+  
+    fn(subject);
+    if (typeof subject === "object" && subject) {
+      _refs.add(subject);
+      for (const key in subject) {
+        execRecursively(fn, subject[key], _refs);
+      }
+      _refs.delete(subject);
+    }
+  }
+  
+  const foo = {
+    foo: "Foo",
+    bar: {
+      bar: "Bar",
+    },
+  };
+  
+  foo.bar.baz = foo; // Circular reference!
+  execRecursively((obj) => console.log(obj), foo);
+
+
+  
