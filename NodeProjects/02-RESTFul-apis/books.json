@@ -1,0 +1,17 @@
+[
+    {
+        "title":"The Great Gatsby",
+        "author":"F. Scott Fitzgerald",
+        "body":"lorem ipsum"
+    },
+    {
+        "title":"The Catcher in the Rye",
+        "author":"J.D. Salinger",
+        "body":"lorem ipsum"
+    },
+    {
+        "title":"To Kill a Mockingbird",
+        "author":"Harper Lee",
+        "body":"lorem ipsum"
+    }
+]
