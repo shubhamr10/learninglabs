@@ -173,4 +173,23 @@ function execRecursively(fn, subject, _refs = new WeakSet()) {
   execRecursively((obj) => console.log(obj), foo);
 
 
-  
+  console.clear();
+
+const map = new Map();
+map.set("abc", 12);
+map.set(john, true);
+
+console.log(map.get(john));
+console.log(map.has("abc"));
+console.log(map.delete("abc"));
+console.log(map);
+console.log(map.size);
+
+john = JSON.stringify({ name : "Shubham" , age:15 });
+map.set(john, "{take:true}")
+map.set("1", 1);
+map.set(true, 123);
+
+for(let [key, value] of map){
+  console.log(`Values: ${key}, ${value}`)
+}

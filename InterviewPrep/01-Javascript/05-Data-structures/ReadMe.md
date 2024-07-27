@@ -236,3 +236,57 @@ execRecursively((obj) => console.log(obj), foo);
 
 
 ### Map
+- Map is a collection of keyed data items just like an Object.
+- The main difference is that Map allows keys of any data type, but Object only allows string.
+
+**Methods and properties are:**
+- `new Map()` : creates a new Map.
+- `map.set(key, value)` : store the values of the key
+- `map.get(key)` : returns the value by the key, returns `undefined` if key does not exist in Map().
+- `map.has(key)` : returns true if exists, else false
+- `map.delete(key)` : removes the key/value pair.
+- `map.clear()` : removes everything from the Map.
+- `map.size` : returns the current element count.
+
+**Iterating over Map**
+- To iterate over a Map, there are 3 methods:
+  - `map.keys()` : returns iteratable for keys of Map
+  - `map.values()` : returns iterable for values of Map
+  - `map.entries()` : returns an iterable for enteries [key, value] it is used by default in for..of
+
+
+Example:
+```javascript
+const map = new Map();
+const john = { name : "shubham" }
+map.set("abc", 12);
+map.set(john, true);
+
+console.log(map.get(john));
+console.log(map.has("abc"));
+console.log(map.delete("abc"));
+console.log(map);
+console.log(map.size);
+
+john = JSON.stringify({ name : "Shubham" , age:15 });
+map.set(john, "{take:true}")
+map.set("1", 1);
+map.set(true, 123);
+for(let [key, value] of map){
+  console.log(`Values: ${key}, ${value}`)
+}
+```
+
+### WeakMap
+- WeakMap is similar to Map, but the keys must only be objects.
+- the Key,value pair only exist till the object is reachable somewhere else in the code as well.
+- It does not allows primitive data type.
+- WeakMap does not support iteration and it's methods:
+- Weak map only has following methods
+
+**Methods**
+- `new WeakMap()` = creates a new weak map.
+- `weakmap.set(key, value)` : add the key, value pair to the weak set
+- `weakmap.get(key)` : return the value of the key if it exists, else undefined
+- `weakmap.has(key)` : returns the true/false if the value is present or not
+- `weakmap.delete(key)` : deletes the key from the map
