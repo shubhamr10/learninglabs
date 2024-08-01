@@ -14,7 +14,7 @@ class App extends React.Component{
   }
 
    handleChange(e){
-    if(e.target.value != ""){
+    if(e.target.value !== ""){
       this.setState({
         todo:e.target.value
       })
@@ -23,7 +23,7 @@ class App extends React.Component{
 
    handleClick(){
     const { todo, todos } = this.state;
-    if(todo == ""){
+    if(todo === ""){
       return 0;
     }
     todos.push(todo);

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import { InputBox, DisplayTodos, Todo } from "./App.class";
+import { InputBox, DisplayTodos } from "./App.class";
 
 export default function App(){
     const [todos, handleTodos] = useState([]);
