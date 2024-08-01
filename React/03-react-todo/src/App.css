@@ -1,0 +1,51 @@
+main{
+  background-color: darkgray;
+  height: 100vh;
+  width: 100%;
+  /* padding-top: 50px; */
+}
+
+.card{
+  width: 500px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+
+}
+
+.input-area input{
+  height: 30px;
+  width: 80%;
+}
+
+.input-area button{
+  height: 34px;
+  width: 17%;
+  margin-left: 5px;
+}
+
+.display-list{
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.display-item{
+  display: flex;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.display-item div{
+  width: 80%;
+  height: 30px;
+}
+
+.display-item button{
+  margin-left: 5px;
+  width: 18%;
+  height: 30px;
+}
