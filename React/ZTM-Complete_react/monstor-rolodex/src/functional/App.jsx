@@ -35,10 +35,10 @@ const App = () => {
      }
     return (
         <div className="App">
-          <h1 className="app-title">Monster Rolodex</h1>
+          <h1 className="app-title">{field}</h1>
           <SearchBox onSearchChange={onSearchChange} placeholder="search monsters" className="search-box" />
-          <div></div>
-          <SearchBox onSearchChange={onSetFeild} placeholder="search fields" className="search-box" />
+          <br/>
+          <SearchBox onSearchChange={onSetFeild} placeholder="enter title" className="search-box" />
           <CardList monsters={filteredMonsters} />
         </div>
       );
