@@ -29,32 +29,44 @@ export const auth = getAuth();
 export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 
 export const db = getFirestore();
-export const createUserDocumentFromAuth = async (userAuth) => {
-  const userDocRef = doc(db, "users", userAuth.uid);
 
-  console.log(userDocRef)
+export const createUserDocumentFromAuth = async (
+  userAuth,
+  additionalInformation = {}
+) => {
+  if (!userAuth) return;
 
-  const userSnapShot = await getDoc(userDocRef);
-  console.log(userSnapShot);
+  const userDocRef = doc(db, 'users', userAuth.uid);
 
-  if(!userSnapShot.exists()){
+  const userSnapshot = await getDoc(userDocRef);
+
+  if (!userSnapshot.exists()) {
     const { displayName, email } = userAuth;
     const createdAt = new Date();
 
-    try{
+    try {
       await setDoc(userDocRef, {
-        displayName, email,
-        createdAt
+        displayName,
+        email,
+        createdAt,
+        ...additionalInformation,
       });
-    } catch (err){
-      console.log(err);
+    } catch (error) {
+      console.log('error creating the user', error.message);
     }
-
   }
+
   return userDocRef;
-  // if user data exits
+};
 
+export const createAuthUserWithEmailAndPassword = async (email, password) => {
+  if (!email || !password) return;
 
-  // return userDocRef
+  return await createUserWithEmailAndPassword(auth, email, password);
+};
 
-}
+export const signInAuthUserWithEmailAndPassword = async (email, password) => {
+  if (!email || !password) return;
+
+  return await signInWithEmailAndPassword(auth, email, password);
+};
