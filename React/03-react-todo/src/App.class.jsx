@@ -80,7 +80,7 @@ export function DisplayTodos({items, onRemove}){
 export function Todo({item, index,  onRemove}){
   return (
     <div className="display-item">
-      <div>{`[${index+1} ] `+item}</div>
+      <div>{`[${index+1} ] `+item.title}</div>
       <button onClick={ e => onRemove(index)}>Delete</button>
     </div>
   )
