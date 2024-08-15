@@ -5,7 +5,6 @@ import { Outlet, Link } from 'react-router-dom';
 import { ReactComponent as CrwnLogo } from '../../assets/crown.svg';
 
 import { NavigationContainer, NavLinksContainer, NavLink, LogoContainer } from "./navigation.styles";
-import { UserContext } from '../../context/user.context';
 import { SignOutUser } from '../../utils/firebase/firebase.utils';
 import CartIcon from '../../components/cart-icon/cart-icon.component';
 import CartDropDown from '../../components/cart-dropdown/cart-dropdown.component';
