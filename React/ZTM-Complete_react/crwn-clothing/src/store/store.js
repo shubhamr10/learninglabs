@@ -15,7 +15,7 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 const middleWares = [process.env.NODE_ENV === "development" && logger].filter(Boolean);
 
 // setup for redux devtools extensions
-const composedEnchancer = (process.env.NODE_ENV === "prod" && window && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
+const composedEnchancer = (process.env.NODE_ENV === "development" && window && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 
 const composedEnchancers = composedEnchancer(applyMiddleware(...middleWares));
 
