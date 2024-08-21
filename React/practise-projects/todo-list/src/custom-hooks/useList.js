@@ -3,19 +3,16 @@ import { useState, useEffect } from "react";
 const useTodoList = () => {
     const [list, setList] = useState([]);
 
-    useEffect(() => {
-        localStorage.clear();
-        localStorage.setItem("todo-list", JSON.stringify(list));
-      }, [list]);
-
     useEffect(()=>{
         const todoList = localStorage.getItem("todo-list");
         if(todoList){
+            console.log(todoList,"asdasd")
             setList(JSON.parse(todoList));
         }
     },[]);
 
     const setTodoList = (newList) => {
+        localStorage.setItem("todo-list", JSON.stringify(newList));
         setList(newList);
     }
 
