@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import Heading from "./components/heading/heading.component";
 import Input from "./components/input/input.component";
 import List from "./components/list/list.component";
+import useTodoList from "./custom-hooks/useList";
 
 const App = () => {
   const [todo, setTodo] = useState("");
-  const [list, setList] = useState([]);
+  const [list, setTodoList] = useTodoList();
 
   const addToListHandler = () => {
     if(todo === ""){
@@ -16,31 +17,21 @@ const App = () => {
         completed:false
       }
 
-      setList([...list, newTask])
+      setTodoList([...list, newTask])
       setTodo("");
   }
 
-  useEffect(()=>{
-    const list = JSON.parse(localStorage.getItem("todo-list"));
-    if(list){
-      setList(list);
-    }
-  },[]);
-  useEffect(() => {
-    localStorage.clear();
-    localStorage.setItem("todo-list", JSON.stringify(list));
-  }, [list]);
 
   const removeFromList = (id) => {
     const updatedList = list.filter((item, index) => index !== id);
     console.log(updatedList)
-    setList(updatedList);
+    setTodoList(updatedList);
   }
 
   const onTaskCompleted = id => {
     const updatedList = list.map((item, index) => index !== id ? item : {...item, completed: true});
     console.log(updatedList)
-    setList(updatedList);
+    setTodoList(updatedList);
   }
 
   return (
