@@ -1,0 +1,84 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main-container{
+  background-color: white;
+  max-width: 500px;
+  margin:0 auto;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 2px dashed black;
+}
+
+.heading-container{
+  text-align: center;
+}
+
+.input-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-container input{
+  width: 80%;
+  height: 30px;
+}
+
+.input-container button{
+  width: 15%;
+  background-color: beige;
+  border: none;
+}
+
+.list-container{
+  box-sizing: border-box;
+}
+
+.list-container .heading{
+  font-size: larger;
+  font-weight: 700;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px;
+  border-bottom: 1px solid orange;
+}
+
+.list{
+  box-sizing: border-box;
+  padding: 5px;
+
+}
+
+.list .item{
+  display: flex;
+  justify-content: space-around;
+  background-color: aliceblue;
+  height: 40px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 6px;
+}
+
+.item .title{
+  width: 75%;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.item .delete{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
