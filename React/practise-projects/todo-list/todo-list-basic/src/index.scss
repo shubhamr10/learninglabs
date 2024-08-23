@@ -1,0 +1,83 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main-container{
+  width: 500px;
+  margin: 0 auto;
+  border: 4px dashed orange;
+  box-sizing: border-box;
+  padding: 5px;
+
+  h1{
+    text-align: center;
+    text-transform: capitalize;
+    color:brown;
+  }
+
+  .input-container{
+    display: flex;
+    justify-content: space-between;
+
+    input{
+      height: 35px;
+      width: 70%;
+    }
+    input:focus{
+      border: 1px solid black;
+    }
+
+    button{
+      width: 25%;
+      border: none;
+      background-color: orange;
+      font-weight: 600;
+      color: black;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+
+  .list-container{
+    margin: 40px 0;
+    border-top: 1px dashed orange;
+    box-sizing: border-box;
+
+    h2{
+      text-align: center;
+      text-transform: capitalize;
+      color:brown;
+    }
+
+    .lists{
+
+      .list{
+        display: flex;
+        justify-content: space-around;
+        background-color: aliceblue;
+        height: 45px;
+        align-items: center;
+
+        .title{
+          width: 80%;
+          font-size: 16px;
+          height: 45px;
+          align-items: center;
+          display: flex;
+        }
+
+        .delete{
+          cursor: pointer;
+        }
+      }
+    }
+
+  }
+}

@@ -1,8 +1,9 @@
-# React + Vite
+# Todo list basic
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A todo list implementation using just basic React functional component.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Concepts used
+- React functional component
+- useState and useEffects
+- custom hooks
+- local storage
