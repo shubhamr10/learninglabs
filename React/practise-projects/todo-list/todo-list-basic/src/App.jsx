@@ -7,6 +7,12 @@ const App = () => {
   const addTodo = (todo) => {
     setList([...lists, todo]);
   }
+  const deleteTask = (index) => {
+    setList([...lists.filter((list, i)=> i !== index)])
+  }
+  const completedToggle = index => {
+    setList([...lists.map((list, i) => i === index ? { ...list, completed:!list.completed }  : list)])
+  }
   return (
     <main>
       <div className="main-container">
@@ -16,7 +22,7 @@ const App = () => {
           <h2>Todos</h2>
           <div className="lists">
             {
-              lists.map((todo, index) => <List key={index} completed={todo.completed} todo={todo.title} index={index} deleteTask={()=>{}} completedToggle={()=>{}} />)
+              lists.map((todo, index) => <List key={index} completed={todo.completed} todo={todo.title} index={index} deleteTask={deleteTask} completedToggle={completedToggle} />)
             }
           </div>
         </div>

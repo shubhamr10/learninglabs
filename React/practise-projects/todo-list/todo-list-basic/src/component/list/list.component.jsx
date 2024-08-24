@@ -1,3 +1,5 @@
+import "./list.styles.scss";
+
 const List = ({ index, completed, deleteTask, todo, completedToggle  }) => {
     const onTaskCompletedToggle = () => {
         completedToggle(index);
