@@ -1,9 +1,10 @@
 import { useState } from "react"; 
 import Input from "./component/input/input.component";
 import List from "./component/list/list.component";
+import useTodo from "./custom-hooks/useTodo";
 
 const App = () => {
-  const [lists, setList] = useState([]);
+  const [lists, setList] = useTodo();
   const addTodo = (todo) => {
     setList([...lists, todo]);
   }
