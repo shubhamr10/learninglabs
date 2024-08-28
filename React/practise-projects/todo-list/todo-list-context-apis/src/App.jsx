@@ -1,10 +1,10 @@
-import { useState } from "react"; 
+import { useContext } from "react"; 
 import Input from "./component/input/input.component";
 import List from "./component/list/list.component";
-import useTodo from "./custom-hooks/useTodo";
+import { TodoContext } from "./context/TodoContext";
 
 const App = () => {
-  const [lists, setList] = useTodo();
+  const { lists, setList } = useContext(TodoContext); 
   const addTodo = (todo) => {
     setList([...lists, todo]);
   }
