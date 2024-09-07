@@ -1,14 +1,22 @@
-import { takeLatest, all, call, put } from "redux-saga/effects";
+import { takeLatest, all, call, put, CallEffect, PutEffect } from "redux-saga/effects";
 import { getCategoriesAndDocuments } from "../../utils/firebase/firebase.utils";
 import { fetchCategoriesFailed, fetchCategoriesSucess } from "./category.action";
 import { CATEGORIES_ACTION_TYPES } from "./category.types";
+import { Category } from "./category.types";
 
-export function* fetchCategoriesAsync(){
+type FetchCategoriesAsyncReturn = Generator<
+  CallEffect<Category[]> | PutEffect,
+  void,
+  Category[]
+>;
+
+
+export function* fetchCategoriesAsync():FetchCategoriesAsyncReturn{
     try{
-        const categoriesArray = yield call(getCategoriesAndDocuments, "categories");
+        const categoriesArray = yield call(getCategoriesAndDocuments);
         yield put(fetchCategoriesSucess(categoriesArray));
     } catch (err){
-        yield put(fetchCategoriesFailed(err));
+        yield put(fetchCategoriesFailed(err as Error));
     }
 }
 

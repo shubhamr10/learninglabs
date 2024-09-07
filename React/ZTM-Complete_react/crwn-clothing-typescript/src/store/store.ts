@@ -1,25 +1,36 @@
-import { compose, applyMiddleware, legacy_createStore } from "redux";
-import logger from "redux-logger";
-import { persistStore, persistReducer } from "redux-persist";
+import { compose, applyMiddleware, legacy_createStore, Middleware } from "redux";
+// import logger from "redux-logger";
+import { persistStore, persistReducer, PersistConfig } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 // import {thunk} from "redux-thunk";
-import createSageMiddleware from "redux-saga";
+import createSageMiddleware, { SagaMiddleware } from "redux-saga";
 import { rootSaga } from "./root-saga";
 
 
 import { rootReducer} from "./rootReducer";
 
-const persistConfig = {
+export type RootState = ReturnType<typeof rootReducer>;
+
+type ExtendedPersistConfig = PersistConfig<RootState> & {
+    whitelist:(keyof RootState)[]
+}
+const persistConfig:ExtendedPersistConfig = {
     key:"root",
     storage,
     blacklist:["user"],
     whitelist:["cart"]
 }
 
+declare global {
+    interface Window {
+        __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose
+    }
+}
+
 const sagaMiddleware = createSageMiddleware();
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
-const middleWares = [process.env.NODE_ENV === "development" && logger, sagaMiddleware].filter(Boolean);
+const middleWares = [process.env.NODE_ENV === "development" ? null : null , sagaMiddleware].filter((middleware): middleware is  SagaMiddleware => Boolean(middleware));
 
 // redux thunk setup
 
