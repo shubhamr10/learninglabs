@@ -12,7 +12,7 @@ import {
   getDocs,
   QueryDocumentSnapshot
 } from "firebase/firestore";
-
+import { Category, CategoryItem } from "../../store/categories/category.types";
 const firebaseConfig = {
   apiKey: "AIzaSyCPKuhUh49ILNOp9SW7Ic7-Tm87CEBD6pE",
   authDomain: "crwn-clothing-ee5c0.firebaseapp.com",
@@ -22,7 +22,7 @@ const firebaseConfig = {
   appId: "1:1067782898179:web:c2957855d07060bcad8436"
 };
 
-import { Category, CategoryItem } from "../../store/categories/category.types";
+
 
 // Initialize Firebase
 const _ = initializeApp(firebaseConfig);
